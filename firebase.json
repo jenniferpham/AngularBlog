@@ -1,0 +1,9 @@
+{
+  "firebase": "angularblog-fb",
+  "public": "app",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

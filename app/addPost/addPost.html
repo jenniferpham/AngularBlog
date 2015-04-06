@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="blog.css" rel="stylesheet">
+</head>
+<body ng-controller="AddPostCtrl">
+<div class="container">
+    <form class="form-horizontal" ng-submit="AddPost()">
+        <fieldset>
+
+            <!--Form Name-->
+            <legend>Create Post</legend>
+
+            <!--Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtTitle">Title</label>
+                <div class="col-md-4">
+                    <input id="txtTitle" name="txtTitle" type="text" placeholder="enter post title here" class="form-control input-md" ng-model="article.title">
+                </div>
+            </div>
+
+            <!--Textarea-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtPost">Post</label>
+                <div class="col-md-4">
+                    <textarea class="form-control" ng-model="article.post" id="txtPost" placeholder="enter post details here" name="txtPost"></textarea>
+                </div>
+            </div>
+
+            <!--Button-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="singlebutton"></label>
+                <div class="col-md-4">
+                    <input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" ng-disabled="!article.title || !article.post" value="Publish" />
+                </div>
+            </div>
+
+        </fieldset>
+
+    </form>
+</div>
+<!--/.container-->
+
+<div class="blog-footer">
+    <p>AngularJS & Firebase Blog App</p>
+</div>
+</body>
+</html>
